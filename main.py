@@ -1,6 +1,7 @@
 from tkinter import *
 import settings
 import utils
+from cell import Cell
 root = Tk()
 # Override the settings of the root window
 
@@ -36,15 +37,22 @@ center_frame = Frame(
     height=utils.height_prct(75),
 )
 
-btn1 = Button(
-    center_frame,
-    bg='blue',
-    text='First Button',  
-)
-btn1.place('x=0, y=0')
 
 
 center_frame.place(x=utils.width_prct(25),
                    y=utils.height_prct(25)
                    )
+
+c1 = Cell()
+c1.create_btn_object(center_frame)
+
+c1.cell_btn_object.grid(
+    column=0 , row=0 # Row and column of the cell
+)
+
+c2 = Cell()
+c2.create_btn_object(center_frame)
+c2.cell_btn_object.grid(
+    column=1, row=0
+)
 root.mainloop() 
