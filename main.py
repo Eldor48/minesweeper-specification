@@ -36,6 +36,14 @@ center_frame = Frame(
     height=utils.height_prct(75),
 )
 
+btn1 = Button(
+    center_frame,
+    bg='blue',
+    text='First Button',  
+)
+btn1.place('x=0, y=0')
+
+
 center_frame.place(x=utils.width_prct(25),
                    y=utils.height_prct(25)
                    )
